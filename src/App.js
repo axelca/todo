@@ -61,7 +61,7 @@ const App = () => {
               <Todo key={todo.id} dispatch={dispatch} todo={todo} />
             ))}
           <li className={currentlyAdding ? styles.hidden : undefined}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={styles.NewTodo}>
               <label name="name">
                 <input type="checkbox" disabled />
                 <input
