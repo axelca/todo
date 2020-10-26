@@ -32,7 +32,15 @@
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
+}
+
+.NewTodo {
+  display: grid;
+  grid-template-columns: 50px 1fr 34px;
+  color: white;
+  align-items: center;
+  padding-bottom: 1em;
 }
 
 .NewTodo input[type="text"] {
@@ -41,9 +49,8 @@
   border-bottom: 1px solid grey;
   padding-bottom: .7em;
   color: white;
-  width: 75%;
-  margin: 0 1.8em;
   font-size: 1em;
+  width: 100%;
 }
 
 .AddNewTodo {

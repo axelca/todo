@@ -22,7 +22,6 @@ const reducer = (todos, { type, payload }) => {
 
     case ACTIONS.TOGGLE_COMPLETE:
       return todos.map((todo) => {
-        console.log(payload);
         if (todo.id === payload.id) {
           return { ...todo, complete: !todo.complete };
         }
@@ -62,7 +61,7 @@ const App = () => {
             todos.map((todo) => (
               <Todo key={todo.id} dispatch={dispatch} todo={todo} />
             ))}
-          <li className={!currentlyAdding ? styles.hidden : undefined}>
+          <li>
             <form onSubmit={handleSubmit} className={styles.NewTodo}>
               <Checkbox disabled />
               <label name="name">

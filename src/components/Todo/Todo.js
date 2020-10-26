@@ -15,7 +15,7 @@ const Todo = ({ todo, dispatch }) => {
 
   return (
     <li className={`${styles.Todo} ${complete ? styles.complete : undefined}`}>
-      <Checkbox clicked={clicked} onChange={() => toggleRadio(id)} />
+      <Checkbox clicked={clicked} toggleRadio={toggleRadio} id={id} />
       <span className={styles.TodoName}>{name}</span>
       <button
         className={styles.deleteTodo}
