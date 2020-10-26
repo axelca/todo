@@ -61,7 +61,7 @@ const App = () => {
             todos.map((todo) => (
               <Todo key={todo.id} dispatch={dispatch} todo={todo} />
             ))}
-          <li>
+          <li className={!currentlyAdding ? styles.hidden : undefined}>
             <form onSubmit={handleSubmit} className={styles.NewTodo}>
               <Checkbox disabled />
               <label name="name">
