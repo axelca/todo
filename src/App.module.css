@@ -1,0 +1,30 @@
+.App {
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "heading"
+    "main"
+    "aside";
+}
+
+.heading {
+  color: white;
+  height: 2em;
+  margin: 0;
+  margin-top: .5em;
+  align-content: center;
+}
+
+.main {
+  height: calc(100vh - 8em);
+}
+
+.aside {
+  height: 2em;
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,8 @@
+.Todo {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+}
+
+.complete {
+  color: blue;
+}
