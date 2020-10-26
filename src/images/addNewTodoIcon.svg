@@ -1,0 +1,7 @@
+<svg id="add_todo" data-name="add todo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="12" cy="12" r="12" fill="#fff"/>
+  <g id="Group_1" data-name="Group 1" transform="translate(-20.995 -760.995)">
+    <line id="Line_1" data-name="Line 1" y2="12" transform="translate(33 766.995)" fill="none" stroke="#242424" stroke-linecap="round" stroke-width="3"/>
+    <line id="Line_2" data-name="Line 2" y2="12" transform="translate(39 772.995) rotate(90)" fill="none" stroke="#242424" stroke-linecap="round" stroke-width="3"/>
+  </g>
+</svg>
