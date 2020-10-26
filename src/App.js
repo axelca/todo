@@ -2,7 +2,9 @@ import { useReducer, useState, useRef } from 'react';
 import Todo from './components/Todo';
 import Empty from './components/Empty';
 import TodoList from './components/TodoList';
+import Checkbox from './components/Checkbox';
 import styles from './App.module.css';
+import addNewTodoIcon from './images/addNewTodoIcon.svg';
 
 export const ACTIONS = {
   ADD_TODO: 'add-todo',
@@ -60,15 +62,16 @@ const App = () => {
             todos.map((todo) => (
               <Todo key={todo.id} dispatch={dispatch} todo={todo} />
             ))}
-          <li className={currentlyAdding ? styles.hidden : undefined}>
+          <li className={!currentlyAdding ? styles.hidden : undefined}>
             <form onSubmit={handleSubmit} className={styles.NewTodo}>
+              <Checkbox disabled />
               <label name="name">
-                <input type="checkbox" disabled />
                 <input
                   onInput={(e) => setName(e.target.value)}
                   onBlur={() => setCurrentlyAdding((prevValue) => !prevValue)}
                   pattern="[A-Öa-ö0-9 ]+"
                   minLength={1}
+                  maxLength={30}
                   value={name}
                   ref={newTodo}
                   required="required"
@@ -81,7 +84,10 @@ const App = () => {
         {todos.length < 1 && !currentlyAdding && <Empty />}
       </main>
       <aside className={styles.aside}>
-        <button onClick={addNewTodo}>Add new todo</button>
+        <button className={styles.AddNewTodo} onClick={addNewTodo}>
+          <img src={addNewTodoIcon} alt="Add new todo" />
+          Add new todo
+        </button>
       </aside>
     </div>
   );

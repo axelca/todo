@@ -1,0 +1,35 @@
+.Checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+.Checkbox input[type=checkbox] {
+  visibility: hidden;
+}
+
+.Checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: grey;
+  border: 2px solid white;
+  border-radius: 100%;  
+}
+
+.Checkbox:hover input ~ span {
+  background-color: gray;
+}
+
+.Checkbox input:active ~ span {
+  background-color: white;
+}
+
+.Checkbox input:disabled ~ span {
+  background-color: white;
+}
+
+.Checkbox input:checked ~ span {
+  background-image: linear-gradient(#F23B73, #3E2AAD);
+}

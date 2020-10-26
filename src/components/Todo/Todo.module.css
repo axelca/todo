@@ -1,8 +1,30 @@
 .Todo {
   display: grid;
-  grid-template-columns: 40px 1fr 40px;
+  grid-template-columns: 50px 1fr 34px;
+  color: white;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.TodoName {
+  border-bottom: 1px solid grey;
+  padding-bottom: .7em;
+}
+
+.Todo input, .Todo img {
+  margin-bottom: 1em;
+}
+
+.Todo img {
+  float: right;
 }
 
 .complete {
-  color: blue;
+  color:grey;
+}
+
+.deleteTodo {
+  background: transparent;
+  outline: none;
+  border: none;
 }

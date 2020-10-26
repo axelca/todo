@@ -21,8 +21,14 @@
   height: calc(100vh - 8em);
 }
 
-.aside {
+.aside button {
   height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.aside img {
+  margin-right: 10px;
 }
 
 .hidden {
@@ -33,5 +39,18 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid grey;
-  padding: 1em;
+  padding-bottom: .7em;
+  color: white;
+  width: 75%;
+  margin: 0 1.8em;
+  font-size: 1em;
+}
+
+.AddNewTodo {
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 1em 0;
+  background: transparent;
 }

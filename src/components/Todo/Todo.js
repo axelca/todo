@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ACTIONS } from '../../App';
+import Checkbox from '../Checkbox';
+import cross from '../../images/cross.svg';
 import styles from './Todo.module.css';
 
 const Todo = ({ todo, dispatch }) => {
@@ -13,9 +15,10 @@ const Todo = ({ todo, dispatch }) => {
 
   return (
     <li className={`${styles.Todo} ${complete ? styles.complete : undefined}`}>
-      <input value={clicked} type="checkbox" onChange={() => toggleRadio(id)} />
-      {name}
+      <Checkbox clicked={clicked} onChange={() => toggleRadio(id)} />
+      <span className={styles.TodoName}>{name}</span>
       <button
+        className={styles.deleteTodo}
         onClick={() =>
           dispatch({
             type: ACTIONS.DELETE_TODO,
@@ -23,7 +26,7 @@ const Todo = ({ todo, dispatch }) => {
           })
         }
       >
-        X
+        <img src={cross} alt="Delete Todo" />
       </button>
     </li>
   );
