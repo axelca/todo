@@ -52,6 +52,7 @@
   color: white;
   font-size: 1em;
   width: 100%;
+  border-radius: 0;
 }
 
 .NewTodo input[type="text"]:focus {
