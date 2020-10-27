@@ -3,37 +3,9 @@ import Todo from './components/Todo';
 import Empty from './components/Empty';
 import TodoList from './components/TodoList';
 import Checkbox from './components/Checkbox';
+import { ACTIONS, reducer } from './reducer';
 import styles from './App.module.css';
 import addNewTodoIcon from './images/addNewTodoIcon.svg';
-
-export const ACTIONS = {
-  ADD_TODO: 'add-todo',
-  DELETE_TODO: 'delete-todo',
-  TOGGLE_COMPLETE: 'toggle-complete',
-};
-
-const reducer = (todos, { type, payload }) => {
-  switch (type) {
-    case ACTIONS.ADD_TODO:
-      return [...todos, newTodo(payload.name)];
-
-    case ACTIONS.DELETE_TODO:
-      return todos.filter(({ id }) => id !== payload.id);
-
-    case ACTIONS.TOGGLE_COMPLETE:
-      return todos.map((todo) => {
-        if (todo.id === payload.id) {
-          return { ...todo, complete: !todo.complete };
-        }
-        return { ...todo };
-      });
-
-    default:
-      throw new Error();
-  }
-};
-
-const newTodo = (name) => ({ id: Date.now(), name, complete: false });
 
 const App = () => {
   const [todos, dispatch] = useReducer(reducer, []);
@@ -48,7 +20,7 @@ const App = () => {
   };
 
   const addNewTodo = async () => {
-    await setCurrentlyAdding((prevCurrentlyAdding) => !prevCurrentlyAdding);
+    await setCurrentlyAdding((prevValue) => !prevValue);
     newTodo.current.focus();
   };
 

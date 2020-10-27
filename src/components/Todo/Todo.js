@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ACTIONS } from '../../App';
+import { ACTIONS } from '../../reducer';
 import Checkbox from '../Checkbox';
 import cross from '../../images/cross.svg';
 import styles from './Todo.module.css';

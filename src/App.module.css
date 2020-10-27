@@ -18,7 +18,7 @@
 }
 
 .main {
-  height: calc(100vh - 8em);
+  height: calc(100vh - 10em);
 }
 
 .aside button {
