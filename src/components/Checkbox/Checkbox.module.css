@@ -5,6 +5,7 @@
 
 .Checkbox input[type=checkbox] {
   visibility: hidden;
+  margin-bottom: 1em;
 }
 
 .Checkbox span {
