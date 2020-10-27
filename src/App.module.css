@@ -13,18 +13,20 @@
   color: white;
   height: 2em;
   margin: 0;
-  margin-top: .5em;
+  margin-top: .75em;
   align-content: center;
+  font-size: 2.5em;
 }
 
 .main {
-  height: calc(100vh - 10em);
+  height: calc(100vh - 13em);
 }
 
 .aside button {
   height: 4em;
   display: flex;
   align-items: center;
+  font-size: 20px;
 }
 
 .aside img {
